@@ -1,0 +1,34 @@
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_keywords in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 7
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_title in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 8
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_author in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 9
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_description in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 10
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_author in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 12
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_title in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 12
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_favicon in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 13
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 17
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 32
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 33
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_dir in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 33
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: site_avatar in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 48
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: site_title in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 51
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: site_name in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 51
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_menus in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 55
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Warning:  Invalid argument supplied for foreach() in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 55
+[24-Nov-2018 16:02:41 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 183
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_keywords in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 7
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_title in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 8
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_author in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 9
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_description in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 10
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_author in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 12
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_title in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 12
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_favicon in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 13
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 17
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 32
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 33
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_dir in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 33
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: site_avatar in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 48
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: site_title in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 51
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: site_name in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 51
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_menus in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 55
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Warning:  Invalid argument supplied for foreach() in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 55
+[24-Nov-2018 16:04:33 Asia/Tehran] PHP Notice:  Undefined variable: page_theme in /home/torabeei/public_html/CMS/themes/classic/layout.php on line 183

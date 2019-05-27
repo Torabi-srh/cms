@@ -1,0 +1,137 @@
+/*****************************/
+/*** Core html setup stuff ***/
+/*****************************/
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+    background: url("/themes/classic/images/texture_bg.png") repeat scroll 0 0 #726f524d !important;    
+    color: #E8E8E8 !important;
+    font-family: 's',sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7) !important;
+    line-height:18px !important;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	font-weight: normal;
+       color:#1c2a48;
+}
+
+a:hover {
+	
+	font-weight: normal;
+       color:#E3D5B7;}
+
+input.button {
+ cursor: pointer;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+	
+.jwts_tabberlive{
+	width:650px;
+}
+fieldset td{
+	background:none !important;
+        border-bottom:1px solid #1c2a48;
+        color:#ffffff;
+}
+fieldset{
+	border-color:#706D6C;
+}
+
+
+th{
+color:#000;	
+}
+
+#pic_in > img {
+    max-width: 122px;
+    max-height: 122px;
+}
+
+#text_pic > h3 {
+    margin-top: 100px;
+}
+
+@media print {
+    .jwts_tabbernav {
+        display: none;
+    }
+}
+
+.box_skitter_large26023 {
+    width: 650px;
+    height: 150px;
+} 
+.box_skitter_small {
+    width: 200px;
+    height: 200px;
+} 
+.box_skitter {
+    border: 0px solid #000;
+    background: #ffffff
+} 
+.label_skitter h5 { 
+    padding-left: 10px !important; 
+} 
+.label_skitter h5,
+.label_skitter h5 a { 
+    margin: 0; 
+    font-family: BebasNeueRegular !important; 
+    font-size: 22px !important; 
+    font-weight: normal !important; 
+    text-decoration: none !important; 
+    padding-right: 5px !important; 
+    padding-bottom: 0px !important; 
+    padding-top: 5px !important; 
+    color: #fff !important; 
+    line-height: 27px !important; 
+    display: block !important; 
+    text-align: left !important; 
+} 
+.label_skitter p { 
+    letter-spacing: 0.4px !important; 
+    line-height: 15px !important; 
+    margin: 0 !important; 
+    font-family: Arial, Helvetica, sans-serif !important; 
+    font-size: 10px !important; 
+    padding-left: 10px !important; 
+    padding-right: 5px !important; 
+    padding-bottom: 2px !important; 
+    padding-top: 0px !important; 
+    color: #fff !important; 
+    z-index: 10 !important; 
+    display: block !important; 
+    text-align: left !important; 
+}
+
+.joomla_ass {
+    align:"center";
+}
+.box_clone {
+    display: none !important;
+}
+.image_main {
+    width: 650px; 
+    height: 150px;
+}
+/*****************************************/
+/*** Template specific layout elements ***/
+/*****************************************/
