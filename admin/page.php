@@ -17,7 +17,7 @@ function _page_update($mysqli,$_attachment = NULL) {
                     if ($stmt = $mysqli->prepare($sql)) {
                         if ($stmt->execute()) {
                             $stmt->store_result();
-                            safeRedirect("pages.php");die();exit();
+                            //safeRedirect("pages.php");die();exit();
                         }
                     }
                 }
@@ -52,7 +52,7 @@ if (!empty($_GET['e'])) {
             $stmt->bind_result($_lid, $_name, $_link, $_bid,$_ico,$_vib);
             $stmt->fetch();
             if (site_id != $_bid) {
-                safeRedirect("pages.php");die();exit();
+                //safeRedirect("pages.php");die();exit();
             }
 
             $sql = "SELECT `content` FROM `post` where `mid` = '$e'";
@@ -68,13 +68,13 @@ if (!empty($_GET['e'])) {
             }
         }
     } else {
-        safeRedirect("pages.php");die();exit();
+        //safeRedirect("pages.php");die();exit();
     }
 } else {
     if (empty($SESSION['edit'])) {
         $ln = intval($_GET['l']);
         if (empty($ln)) {
-            safeRedirect("pages.php");die();exit();
+            //safeRedirect("pages.php");die();exit();
         } 
         $error="";
     if (!empty($_POST['snt']) && !empty($_POST['mnm'])) {
@@ -93,7 +93,7 @@ if (!empty($_GET['e'])) {
                     if ($stmt = $mysqli->prepare($sql)) {
                         if ($stmt->execute()) {
                             $stmt->store_result();
-                            safeRedirect("pages.php");die();exit();
+                            //safeRedirect("pages.php");die();exit();
                         }
                     }
                 }
