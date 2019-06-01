@@ -109,7 +109,6 @@ if (!empty($_GET['e'])) {
 }
 
 $_SESSION['dvs'] = SaltMD5(rand(1, 100+intval(date('h.i', time()))));
-echo $vib;die();
 ?>
 <link href="assets/css/fontawesome-iconpicker.min.css" rel="stylesheet">
     <div class="page-inner">
@@ -136,7 +135,7 @@ echo $vib;die();
                     </div>
                     <div class="panel-body">
                         <div class="col-sm-4 checkbox">
-                          <label <?php echo ((!empty($vib)&&$vib=="1")?'class="active"':""); ?>><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($vib)&&$vib=="1")?'checked="checked" class="active"':""); ?>>Invisibale</label>
+                          <label <?php echo ((!empty($_vib)&&$_vib=="1")?'class="active"':""); ?>><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($_vib)&&$_vib=="1")?'checked="checked" class="active"':""); ?>>Invisibale</label>
                         </div>
                         <div class="col-sm-4">
                             <div class="input-group mb-3">
