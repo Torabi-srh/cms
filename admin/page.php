@@ -5,7 +5,7 @@ function _page_update($mysqli,$_attachment = NULL) {
             //$content = TextToDB($_POST['snt']);
             $content = $mysqli->real_escape_string(htmlentities(htmlspecialchars($_POST['snt'])));
             $menu = TextToDB($_POST['mnm']);
-            $vib = isset($_POST['vib']);
+            $vib = (!empty($_POST['vib'])?'1':'0');
             $ico = TextToDB($_POST['ico']);
             $sql = "update `menu` set `ico`='$ico',`visibility`='$vib', `name` ='".$menu."' where id='". $_SESSION['edit'] ."' and bid='".site_id ."'";
             if ($stmt = $mysqli->prepare($sql)) {
@@ -82,7 +82,7 @@ if (!empty($_GET['e'])) {
             //$content = TextToDB($_POST['snt']);
             $content = $mysqli->real_escape_string(htmlentities(htmlspecialchars($_POST['snt'])));
             $menu = TextToDB($_POST['mnm']);
-            $vib = isset($_POST['vib']);
+            $vib = (!empty($_POST['vib'])?'1':'0');
             $ico = TextToDB($_POST['ico']);
             $sql = "insert into `menu`(`lid`, `name`, `link`, `bid`, `ico`, `visibility`) values ('".$ln."', '".$menu."', '', '".site_id ."', '".$vib."', '".$ico."')";
             if ($stmt = $mysqli->prepare($sql)) {
