@@ -1,4 +1,9 @@
-<?php include "header.php";
+<?php 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+
+include "header.php";
 function _page_update($mysqli,$_attachment = NULL) {
     if(!empty($_POST['snt']) && !empty($_POST['mnm'])) {
         if ((!empty($_SESSION['dvs']) && $_SESSION['dvs'] == $_POST['v'])) {
