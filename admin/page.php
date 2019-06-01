@@ -37,8 +37,8 @@ if (!empty($_GET['e'])) {
         $error=_page_update($mysqli);
     }
     $e = TextToDB($_GET['e']);
-    var_dump(!empty($_SESaSION['dvs']) , $_SESSION['dvs'] == $_GET['v'] , $_SESSION['dvs'] , $_POST['v']);die();
-    if (!empty($_SESaSION['dvs']) && ($_SESSION['dvs'] == $_GET['v'] || $_SESSION['dvs'] == $_POST['v'])) {
+    var_dump($_SESSION,!empty($_SESSION['dvs']) , $_SESSION['dvs'] , $_GET['v'] , $_SESSION['dvs'] , $_POST['v']);die();
+    if (!empty($_SESSION['dvs']) && ($_SESSION['dvs'] == $_GET['v'] || $_SESSION['dvs'] == $_POST['v'])) {
         $sql = "SELECT `lid`, `name`, `link`, `bid`,`ico`,`visibility` FROM `menu` where `id` = '$e'";
         $_lid;
         $_name;
