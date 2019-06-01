@@ -1,7 +1,8 @@
 <?php include "header.php"; 
 
 if (!empty($_GET['v'])) {
-    if ((!empty($_SESSION['dvs']) && $_SESSION['dvs'] == $_GET['v'])) {
+    //var_dump($_SESSION);die();
+    if (!empty($_SESSION['dvs']) && $_SESSION['dvs'] == $_GET['v']) {
         if (!empty($_GET['d'])) {
                 $delete = TextToDB($_GET['d']);  
                 $sql = "delete from `menu` where `id`='".$delete."' and `bid`='".$_SESSION['bid'] ."'";
@@ -82,7 +83,9 @@ require '../assets/db.php';
                                             </th> 
                                             <th class="sorting" tabindex="0" colspan="1" >
                                                 menu
-                                            </th>  
+                                            </th>
+                                            <th class="sorting" tabindex="0" colspan="1"> 
+                                            </th>
                                             <th class="sorting" tabindex="0" colspan="1" style="width: 165px;"> 
                                             </th>
                                         </tr>
@@ -97,7 +100,10 @@ require '../assets/db.php';
                                             </td> 
                                             <td>
                                                 <?php echo $vc['text']; ?>
-                                            </td> 
+                                            </td>
+                                            <td>
+                                            <?php echo url(); ?>/index.php?cid=<?php echo $vc['id'] ?>
+                                            </td>
                                             <td>
                                                 <div class="input-group-btn">
                                                             <button type="button" class="btn btn-default" data-toggle="dropdown" aria-expanded="true">Action <span class="caret"></span></button>

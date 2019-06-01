@@ -41,19 +41,20 @@ if ($stmt = $mysqli->prepare($sql)) {
 }
 
 $username= "test";
-$sql = "SELECT `id`,`lid`,`name`,`link`, `ico` FROM `menu` where `bid` = '". site_id ."'";
+$sql = "SELECT `id`,`lid`,`name`,`link`, `ico`, `visibility` FROM `menu` where `bid` = '". site_id ."'";
 $menu_lid;
 $menu_id;
 $menu_ico;
 $menu_name;
 $menu_link;
+$menu_visibility;
 $page_menus = array();
 if ($stmt = $mysqli->prepare($sql)) {
     $stmt->execute();
     $stmt->store_result();
-    $stmt->bind_result($menu_id, $menu_lid, $menu_name, $menu_link, $menu_ico);
+    $stmt->bind_result($menu_id, $menu_lid, $menu_name, $menu_link, $menu_ico, $menu_visibility);
     while($stmt->fetch()) {
-        $page_menus["l$menu_lid"][] = array('id' => $menu_id, 'link'=>$menu_link,'text'=>$menu_name, 'ico'=>$menu_ico);
+        $page_menus["l$menu_lid"][] = array('id' => $menu_id, 'link'=>$menu_link,'text'=>$menu_name, 'ico'=>$menu_ico, 'visibility'=>$menu_visibility);
     }
 }
 

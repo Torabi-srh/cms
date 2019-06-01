@@ -1,7 +1,14 @@
 <?php 
 require '../assets/functions.php';
-if (!login_check()) {
-    safeRedirect("/admin/login.php");die();exit();
+if (!islocal()) {
+    if (!login_check()) {
+        safeRedirect("/admin/login.php");die();exit();
+    }
+} else {
+    if (!login_check()) {
+        //$login = Login('admin2@ariyanborna.com', '123456');
+    }
+    $_SESSION['bid'] = 1;
 }
 $mysqli = isset($mysqli) ? $mysqli : Connection();
 require '../assets/db.php';
@@ -27,8 +34,10 @@ if (isUrlSafe($SERVER_REQ) > -1) {
 
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-        <link href="/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/admin/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!--<link href="/admin/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/admin/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
         <link href="/admin/assets/plugins/icomoon/style.css" rel="stylesheet">
         <link href="/admin/assets/plugins/uniform/css/default.css" rel="stylesheet"/>
         <link href="/admin/assets/plugins/switchery/switchery.min.css" rel="stylesheet"/>
@@ -54,7 +63,7 @@ if (isUrlSafe($SERVER_REQ) > -1) {
             <!-- Page Sidebar -->
             <div class="page-sidebar">
                 <a class="logo-box" href="/">
-                    <span>Ferdows</span> 
+                    <span><?php echo site_title; ?></span> 
                     <i class="icon-close" id="sidebar-toggle-button-close"></i>
                 </a>
                 <div class="page-sidebar-inner">
@@ -128,16 +137,6 @@ if (isUrlSafe($SERVER_REQ) > -1) {
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                             <div class="seperator"></div>
-                            <div class="pull-right dpcflo"> 
-                                <ul class="nav navbar-nav"> 
-                                    <li class="user user-menu">
-                                        <!-- Menu Toggle Button -->
-                                        <a href="fa">
-                                            <span class="hidden-xs">Persian</span>
-                                        </a> 
-                                    </li>
-                                </ul>
-                            </div><!-- /.navbar-collapse -->
                         </div><!-- /.container-fluid -->
                     </nav>
                 </div>

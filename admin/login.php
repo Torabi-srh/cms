@@ -1,8 +1,12 @@
 <?php
 require '../assets/functions.php';
-if (login_check()) {
-    safeRedirect("fa/index.php");die();exit();
+if (islocal()) {
+    safeRedirect("index.php");die();exit();
 }
+if (login_check()) {
+    safeRedirect("index.php");die();exit();
+}
+var_dump($_SESSION);
 $mysqli = isset($mysqli) ? $mysqli : Connection();
 require '../assets/db.php';
 user_activitys();
