@@ -84,7 +84,7 @@ if (!empty($_GET['e'])) {
             $menu = TextToDB($_POST['mnm']);
             $vib = (!empty($_POST['vib'])?'1':'0');
             $ico = TextToDB($_POST['ico']);
-            $sql = "insert into `menu`(`lid`, `name`, `link`, `bid`, `ico`, `visibility`) values ('".$ln."', '".$menu."', '', '".site_id ."', '".$vib."', '".$ico."')";
+            echo $sql = "insert into `menu`(`lid`, `name`, `link`, `bid`, `ico`, `visibility`) values ('".$ln."', '".$menu."', '', '".site_id ."', '".$vib."', '".$ico."')";die();
             if ($stmt = $mysqli->prepare($sql)) {
                 if ($stmt->execute()) {
                     $stmt->store_result();
