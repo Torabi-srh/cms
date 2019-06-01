@@ -136,7 +136,7 @@ $_SESSION['dvs'] = SaltMD5(rand(1, 100+intval(date('h.i', time()))));
                     </div>
                     <div class="panel-body">
                         <div class="col-sm-4 checkbox">
-                          <label><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($vib)&&$vib=="1")?"checked":""); ?>>Invisibale</label>
+                          <label><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($vib)&&$vib=="1")?'checked="checked"':""); ?>>Invisibale</label>
                         </div>
                         <div class="col-sm-4">
                             <div class="input-group mb-3">
