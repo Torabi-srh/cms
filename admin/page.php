@@ -109,7 +109,7 @@ if (!empty($_GET['e'])) {
 }
 
 $_SESSION['dvs'] = SaltMD5(rand(1, 100+intval(date('h.i', time()))));
-
+echo $vib;die();
 ?>
 <link href="assets/css/fontawesome-iconpicker.min.css" rel="stylesheet">
     <div class="page-inner">
