@@ -205,7 +205,7 @@
                                 </a>
                                 <ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs" <?php echo ($page_direction == 'rtl' ? ''  : 'style="direction: ltr !important;"') ?>>
                                     <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
-                                    <?php if($page_menu['visibility']=0) continue; ?>
+                                    <?php if($page_menu['visibility']==0) continue; ?>
                                     <li class="sp-menu-item <?php if(!empty($cid) && $cid == $page_menu['id']) echo "current-item active"; ?>">
                                         <a href="/index.php?cid=<?php echo $page_menu['id'] ?>">
                                             <i class="<?php echo $page_menu['ico'] ?>"></i>
