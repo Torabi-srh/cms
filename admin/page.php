@@ -7,7 +7,8 @@ function _page_update($mysqli,$_attachment = NULL) {
             $menu = TextToDB($_POST['mnm']);
             $vib = (!empty($_POST['vib'])?'1':'0');
             $ico = TextToDB($_POST['ico']);
-            $sql = "update `menu` set `ico`='$ico',`visibility`='$vib', `name` ='".$menu."' where id='". $_SESSION['edit'] ."' and bid='".site_id ."'";
+            $slds = (!empty($_POST['slds'])?'1':'0');
+            $sql = "update `menu` set `ico`='$ico',`visibility`='$vib', `name` ='".$menu."', `showsilder` ='".$slds."' where id='". $_SESSION['edit'] ."' and bid='".site_id ."'";
             if ($stmt = $mysqli->prepare($sql)) {
                 if ($stmt->execute()) {
                     $stmt->store_result();
@@ -38,23 +39,23 @@ if (!empty($_GET['e'])) {
     }
     $e = TextToDB($_GET['e']);
     if (!empty($_SESSION['dvs']) && ($_SESSION['dvs'] == $_GET['v'] || $_SESSION['dvs'] == $_POST['v'])) {
-        $sql = "SELECT `lid`, `name`, `link`, `bid`,`ico`,`visibility` FROM `menu` where `id` = '$e'";
+        $sql = "SELECT `lid`, `name`, `link`, `bid`,`ico`,`visibility`, `showsilder` FROM `menu` where `id` = '$e'";
         $_lid;
         $_name;
         $_link;
         $_bid;
         $_vib;
         $_ico;
+        $_slds;
         $page_menus = array();
         if ($stmt = $mysqli->prepare($sql)) {
             $stmt->execute();
             $stmt->store_result();
-            $stmt->bind_result($_lid, $_name, $_link, $_bid,$_ico,$_vib);
+            $stmt->bind_result($_lid, $_name, $_link, $_bid,$_ico,$_vib,$_slds);
             $stmt->fetch();
             if (site_id != $_bid) {
                 safeRedirect("pages.php");die();exit();
             }
-
             $sql = "SELECT `content` FROM `post` where `mid` = '$e'";
             $_content;
             $page_menus = array();
@@ -84,7 +85,8 @@ if (!empty($_GET['e'])) {
             $menu = TextToDB($_POST['mnm']);
             $vib = (!empty($_POST['vib'])?'1':'0');
             $ico = TextToDB($_POST['ico']);
-            $sql = "insert into `menu`(`lid`, `name`, `link`, `bid`, `ico`, `visibility`) values ('".$ln."', '".$menu."', '', '".site_id ."', '".$ico."', '".$vib."')";
+            $slds = (!empty($_POST['slds'])?'1':'0');
+            $sql = "insert into `menu`(`lid`, `name`, `link`, `bid`, `ico`, `visibility`, `showsilder`) values ('".$ln."', '".$menu."', '', '".site_id ."', '".$ico."', '".$vib."', '".$slds."')";
             if ($stmt = $mysqli->prepare($sql)) {
                 if ($stmt->execute()) {
                     $stmt->store_result();
@@ -136,6 +138,9 @@ $_SESSION['dvs'] = SaltMD5(rand(1, 100+intval(date('h.i', time()))));
                     <div class="panel-body">
                         <div class="col-sm-4 checkbox">
                           <label <?php echo ((!empty($_vib)&&$_vib=="1")?'class="active"':""); ?>><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($_vib)&&$_vib=="1")?'checked="checked" class="active"':""); ?>>Invisibale</label>
+                        </div>
+                        <div class="col-sm-4 checkbox">
+                          <label <?php echo ((!empty($_slds)&&$_slds=="1")?'class="active"':""); ?>><input type="checkbox" name="slds" id="slds" <?php echo ((!empty($_slds)&&$_slds=="1")?'checked="checked" class="active"':""); ?>>Show silder</label>
                         </div>
                         <div class="col-sm-4">
                             <div class="input-group mb-3">
@@ -191,7 +196,7 @@ $_SESSION['dvs'] = SaltMD5(rand(1, 100+intval(date('h.i', time()))));
  });
 
     CKEDITOR.replace( 'editor', {
-extraPlugins: 'bootstrapTabs',
+extraPlugins: 'bootstrapTabs,codesnippet',
   contentsCss: [ 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' ],
   on: {
     instanceReady: loadBootstrap,
@@ -214,7 +219,7 @@ function loadBootstrap(event) {
     jQueryScriptTag.onload = function() {
       editorHead.appendChild(bootstrapScriptTag);
     };
-}
+} 
 </script>
         <script src="../js/toastr.js"></script>  
         <script> 

@@ -41,20 +41,21 @@ if ($stmt = $mysqli->prepare($sql)) {
 }
 
 $username= "test";
-$sql = "SELECT `id`,`lid`,`name`,`link`, `ico`, `visibility` FROM `menu` where `bid` = '". site_id ."'";
+$sql = "SELECT `id`,`lid`,`name`,`link`, `ico`, `visibility`, `showsilder` FROM `menu` where `bid` = '". site_id ."'";
 $menu_lid;
 $menu_id;
 $menu_ico;
 $menu_name;
 $menu_link;
 $menu_visibility;
+$menu_showsilder;
 $page_menus = array();
 if ($stmt = $mysqli->prepare($sql)) {
     $stmt->execute();
     $stmt->store_result();
-    $stmt->bind_result($menu_id, $menu_lid, $menu_name, $menu_link, $menu_ico, $menu_visibility);
+    $stmt->bind_result($menu_id, $menu_lid, $menu_name, $menu_link, $menu_ico, $menu_visibility, $menu_showsilder);
     while($stmt->fetch()) {
-        $page_menus["l$menu_lid"][] = array('id' => $menu_id, 'link'=>$menu_link,'text'=>$menu_name, 'ico'=>$menu_ico, 'visibility'=>$menu_visibility);
+        $page_menus["l$menu_lid"][] = array('id' => $menu_id, 'link'=>$menu_link,'text'=>$menu_name, 'ico'=>$menu_ico, 'visibility'=>$menu_visibility, 'showsilder'=>$menu_showsilder);
     }
 }
 
@@ -227,18 +228,13 @@ if ($stmt = $mysqli->prepare($sql)) {
 // }
 // $syllabus = $course;
 if (!empty($cid)) {
-    // var_dump($page_menus);die();
-    // if (!empty($page_menus["l1"])) {
-    // echo $cid;die();
-    // if ($cid !== -1) {
-    //$cid = $page_menus["l1"][0]['id'];
-    //}
     $sql = "SELECT `id`,`content`,`created`,`mid`,`parent` FROM `post` where `mid` = '". $cid ."'";
     $post_created;
     $post_id;
     $post_mid;
     $post_content;
     $page_parent;
+    $page_showslider;
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->execute();
         $stmt->store_result();
@@ -246,7 +242,13 @@ if (!empty($cid)) {
                 $stmt->fetch();
                 $post_content = html_entity_decode(htmlspecialchars_decode($post_content));
             }
-        // }
-    // }
+    
+    $sql = "SELECT `showsilder` FROM `post` where `id` = '". $cid ."'";
+    if ($stmt = $mysqli->prepare($sql)) {
+        $stmt->execute();
+        $stmt->store_result();
+        $stmt->bind_result($page_showslider);
+                $stmt->fetch();
+            }
 }
 ?>

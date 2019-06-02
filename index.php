@@ -1,5 +1,4 @@
 <?php
-
 clearstatcache() ;
 require 'assets/functions.php';
 if (!is_session_started()) sessionStart("ferdws_");

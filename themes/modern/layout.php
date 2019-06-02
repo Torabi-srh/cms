@@ -227,6 +227,7 @@
                 </div>
             </div>
         </section>
+        <?php if(!empty($page_showslider) && $page_showslider == 1): ?>
         <section id="sp-ariab-slide">
             <div class="row">
                 <div id="sp-slide" class="col-sm-12 col-md-12">
@@ -372,6 +373,7 @@
                 </div>
             </div>
         </section>
+        <?php endif; ?>
         <section id="sp-content-top"></section>
         <section id="sp-content-bottom">
             <div class="container">

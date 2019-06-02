@@ -1,14 +1,7 @@
 <?php 
 require '../assets/functions.php';
-if (!islocal()) {
-    if (!login_check()) {
-        safeRedirect("/admin/login.php");die();exit();
-    }
-} else {
-    if (!login_check()) {
-        //$login = Login('admin2@ariyanborna.com', '123456');
-    }
-    $_SESSION['bid'] = 1;
+if (!login_check()) {
+    safeRedirect("/admin/login.php");die();exit();
 }
 $mysqli = isset($mysqli) ? $mysqli : Connection();
 require '../assets/db.php';
