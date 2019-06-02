@@ -128,9 +128,9 @@ require '../assets/db.php';
                                             <ul class="list-unstyled">
                                                 <form action="" method="post" enctype="multipart/form-data">
         <input type="hidden" name="v" value="<?php echo $_SESSION['dvs']; ?>" />
-                                                    <li>Avatar<div class="pull-right"><input name="file" class="" type="file" /></div></li> 
-                                                    <li>Home page picture<div class="pull-right"><input name="filez" class="" type="file" /></div></li> 
-                                                    <li>Name<div class="text pull-right"><input name="site_name" class="form-control" type="text" value="<?php echo $site_name; ?>" /></div></li> 
+                                                    <li>Logo<div class="pull-right"><input name="file" class="" type="file" /></div></li> 
+                                                    <li>Fav icon<div class="pull-right"><input name="filez" class="" type="file" /></div></li> 
+                                                    <li>Site name<div class="text pull-right"><input name="site_name" class="form-control" type="text" value="<?php echo $site_name; ?>" /></div></li> 
                                                     <li>Title<div class="text pull-right"><input name="site_title" class="form-control" type="text" value="<?php echo $site_title; ?>" /></div></li> 
                                                     <li>Email<div class="text pull-right"><input name="site_email" class="form-control" type="text" value="<?php echo $site_email; ?>" /></div></li> 
                                                     <li>Affiliation<div class="text pull-right"><input name="site_affiliation" class="form-control" type="text" value="<?php echo $site_affiliation; ?>" /></div></li> 

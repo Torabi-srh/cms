@@ -39712,7 +39712,7 @@ body.rtl
     }
 
 body.rtl .fa-home {
-    display: none
+    /*display: none*/
 }
 
 body.rtl .sp-menu-item
