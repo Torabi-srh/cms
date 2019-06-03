@@ -3,6 +3,7 @@ function _page_update($mysqli,$_attachment = NULL) {
     if(!empty($_POST['snt']) && !empty($_POST['mnm'])) {
         if ((!empty($_SESSION['dvs']) && $_SESSION['dvs'] == $_POST['v'])) {
             //$content = TextToDB($_POST['snt']);
+            $error = 'toastr["warning"]("لطفا صفحه را مجددا بارگذاری کنید و دوباره تلاش کنید", "هشدار صفحه");';
             $content = $mysqli->real_escape_string(htmlentities(htmlspecialchars($_POST['snt'])));
             $menu = TextToDB($_POST['mnm']);
             $vib = (!empty($_POST['vib'])?'1':'0');
@@ -24,7 +25,7 @@ function _page_update($mysqli,$_attachment = NULL) {
                     }
                 }
             }
-            return 'toastr["warning"]("لطفا صفحه را مجددا بارگذاری کنید و دوباره تلاش کنید", "هشدار صفحه");';
+            return $error;
         } else {
            return 'toastr["warning"]("لطفا صفحه را مجددا بارگذاری کنید و دوباره تلاش کنید", "هشدار صفحه");';
         }
