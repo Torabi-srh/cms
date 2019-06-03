@@ -102,7 +102,7 @@ require '../assets/db.php';
                                                 <?php echo $vc['text']; ?>
                                             </td>
                                             <td>
-                                            <?php echo url(); ?>/index.php?cid=<?php echo $vc['id'] ?>
+                                            <?php ?>/index.php?cid=<?php echo $vc['id'] ?>
                                             </td>
                                             <td>
                                                 <div class="input-group-btn">
