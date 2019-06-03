@@ -85,6 +85,7 @@ require '../assets/db.php';
                                                 menu
                                             </th>
                                             <th class="sorting" tabindex="0" colspan="1"> 
+                                                page url
                                             </th>
                                             <th class="sorting" tabindex="0" colspan="1" style="width: 165px;"> 
                                             </th>
