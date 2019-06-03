@@ -18,7 +18,8 @@ function _page_update($mysqli,$_attachment = NULL) {
                     if ($stmt = $mysqli->prepare($sql)) {
                         if ($stmt->execute()) {
                             $stmt->store_result();
-                            safeRedirect("pages.php");die();exit();
+                            $error =  'toastr["success"]("successfuly saved", "Page saved");';
+                            //safeRedirect("pages.php");die();exit();
                         }
                     }
                 }
@@ -95,7 +96,8 @@ if (!empty($_GET['e'])) {
                     if ($stmt = $mysqli->prepare($sql)) {
                         if ($stmt->execute()) {
                             $stmt->store_result();
-                            safeRedirect("pages.php");die();exit();
+                            $error =  'toastr["success"]("successfuly updated", "Page updated");';
+                            //safeRedirect("pages.php");die();exit();
                         }
                     }
                 }
