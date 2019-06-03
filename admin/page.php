@@ -112,12 +112,30 @@ if (!empty($_GET['e'])) {
 
 $_SESSION['dvs'] = SaltMD5(rand(1, 100+intval(date('h.i', time()))));
 ?>
+<script>
+var formSubmitting = false;
+var setFormSubmitting = function() { formSubmitting = true; };
+
+window.onload = function() {
+    window.addEventListener("beforeunload", function (e) {
+        if (formSubmitting) {
+            return undefined;
+        }
+
+        var confirmationMessage = 'It looks like you have been editing something. '
+                                + 'If you leave before saving, your changes will be lost.';
+
+        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+    });
+};
+</script>
 <link href="assets/css/fontawesome-iconpicker.min.css" rel="stylesheet">
     <div class="page-inner">
         <div class="page-title">
             <h3 class="breadcrumb-header">new page</h3>
         </div>
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="setFormSubmitting()">
         <input type="hidden" name="v" value="<?php echo $_SESSION['dvs']; ?>" />
             <div id="main-wrapper">
                 <div class="panel panel-white"> 

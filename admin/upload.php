@@ -17,7 +17,7 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
             }
         } elseif (!empty($_FILES['file'])) {
             $target_dir = "/assets/files/";
-            $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx');
+            $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg');
             $file_name =$_FILES['file']['name']; 
             $tmp = explode('.', $file_name);
             $file_extension = end($tmp);

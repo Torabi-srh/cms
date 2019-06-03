@@ -49,6 +49,14 @@ if (isUrlSafe($SERVER_REQ) > -1) {
         <link href="/admin/assets/css/custom.css" rel="stylesheet">
         <link href="/admin/assets/css/summernote-ext-emoji-ajax.css" rel="stylesheet">
         <link href="../css/toastr.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script src="/admin/assets/js/jquery.are-you-sure.js"></script>
+        <script src="/admin/assets/js/ays-beforeunload-shim.js"></script>
+        <script>
+$(function() {
+    $('form').areYouSure();
+}
+</script>
     </head>
     <body> 
         <!-- Page Container -->

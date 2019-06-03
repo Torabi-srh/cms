@@ -1,7 +1,7 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-RewriteRule ^game/([0-9]+)/([_-0-9a-zA-Z]+)/?$  index.php?mclang=$1&cid=$2 [L,NC]
+RewriteRule ^user/([0-9]*)/([a-z]*)$ ./index.php?mclang=$1&cid=$2
 
  <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
