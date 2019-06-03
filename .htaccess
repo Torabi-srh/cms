@@ -2,6 +2,7 @@ Options +FollowSymLinks
 RewriteEngine On
 
 RewriteRule ^user/([0-9]*)/([a-z]*)$ ./index.php?mclang=$1&cid=$2
+RedirectMatch 403 ^/assets/files/?$
 
  <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
