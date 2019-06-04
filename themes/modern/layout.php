@@ -438,13 +438,10 @@
                                     <div class="sp-module-content">
                                         <div class="rsform">
                                             <form method="post" id="userForm" action="/">
-                                                    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                                    <label for="ct_email">Email</label>
+    <input type="text" id="ct_email" name="ct_email" placeholder="Email..">
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
     <input type="submit" value="Submit">
                                             </form>
                                         </div>
