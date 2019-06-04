@@ -438,9 +438,9 @@
                                     <div class="sp-module-content">
                                         <div class="rsform">
                                             <form method="post" id="userForm" action="/">
-                                                    <label for="ct_email">Email</label>
+                                                    <label for="ct_email" style="font-size: inherit;font-weight: inherit;">Email</label>
     <input type="text" id="ct_email" name="ct_email" placeholder="Email..">
-    <label for="subject">Subject</label>
+    <label for="subject" style="font-size: inherit;font-weight: inherit;">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
     <input type="submit" value="Submit">
                                             </form>
