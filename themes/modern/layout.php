@@ -408,8 +408,9 @@
                                                         <div>
                                                             <i class="fab fa-twitter" style="font-size: 2em;color: cadetblue;" class="ahab_social"></i> 
                                                             <i class="fab fa-google-plus-g" class="ahab_social" style="font-size: 2em;color: firebrick;"></i> 
-                                                            <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i><br>&nbsp;</p>
+                                                            <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i>
                                                         </div>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
