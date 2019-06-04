@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php echo ($page_direction == 'rtl' ? 'xml:lang="fa-ir" lang="fa-ir" dir="rtl"'  : 'xml:lang="en-gb" dir="ltr" slick-uniqueid="3" lang="en-gb"') ?>>
 <head>
     <link href="/css/jcemediabox/jcemediabox.css?3ab6d4490e67378d035cce4c84ffa080" rel="stylesheet" type="text/css" />
@@ -404,7 +404,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="ariab_phone">
-                                                        <p></p>
+<p>تلفـن: <br> فکس: <br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-family: myriad; font-size: 18px;">  </span><br>&nbsp; <img src="/images/ahab_template/twitter.png" alt="twitter" class="ahab_social"> <img src="/images/ahab_template/googleplus.png" alt="googleplus" class="ahab_social"><img src="/images/ahab_template/linkedin.png" alt="linkedin" class="ahab_social"><br>&nbsp;</p>
                                                     </div>
                                                 </div>
                                             </div>
