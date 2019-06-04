@@ -437,11 +437,51 @@
                                 <div class="sp-module ">
                                     <div class="sp-module-content">
                                         <div class="rsform">
-                                            <form method="post" id="userForm" action="/">
-                                                <fieldset class="form-horizontal formContainer" id="rsform_1_page_0"></fieldset>
-                                                <input type="hidden" name="form[formId]" value="1" />
-                                            </form>
-                                        </div>
+	<form method="post" id="userForm" action="http://www.ahabco.org/fa/">
+<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->
+<fieldset class="form-horizontal formContainer" id="rsform_1_page_0">
+	<div class="form-group rsform-block rsform-block-fullname">
+		
+		<div class="col-sm-12 formControls">
+			<input type="text" value="نام" size="10" name="form[FullName]" id="FullName" class="rsform-input-box form-control rsform-input-box">			
+		</div>
+		<div class="col-sm-3"><span class="formValidation"><span id="component1" class="formNoError">موارد را تکمیل نمایید.</span></span>			
+		</div>
+	</div>
+	<div class="form-group rsform-block rsform-block-email">
+		
+		<div class="col-sm-12 formControls">
+			<input type="text" value="ایمیل" size="20" name="form[Email]" id="Email" class="rsform-input-box form-control rsform-input-box">			
+		</div>
+		<div class="col-sm-3"><span class="formValidation"><span id="component3" class="formNoError">لطفا ایمیل خود را به درستی وارد نمایید.</span></span>			
+		</div>
+	</div>
+	<div class="form-group rsform-block rsform-block-company">
+		
+		<div class="col-sm-12 formControls">
+			<input type="text" value="شرکت" size="10" name="form[company]" id="company" class="rsform-input-box form-control rsform-input-box">			
+		</div>
+		<div class="col-sm-3"><span class="formValidation"><span id="component23" class="formNoError">موارد را تکمیل نمایید.</span></span>			
+		</div>
+	</div>
+	<div class="form-group rsform-block rsform-block-description">
+		
+		<div class="col-sm-12 formControls">
+			<textarea cols="50" rows="5" name="form[description]" id="description" class="rsform-text-box form-control rsform-text-box" style="width: 231px; height: 17px;">توضیحات</textarea>			
+		</div>
+		<div class="col-sm-3"><span class="formValidation"><span id="component24" class="formNoError">موارد را تکمیل نمایید.</span></span>			
+		</div>
+	</div>
+	<div class="form-group rsform-block rsform-block-submit">
+		<label class="col-sm-3 control-label formControlLabel" data-toggle="tooltip" title="" for="Submit" data-original-title="" style="display: none;"></label>
+		<div class="col-sm-12 formControls">
+			<button type="submit" name="form[Submit]" id="Submit" class="rsform-submit-button  btn btn-primary">ارسال</button>			
+		</div>
+		<div class="col-sm-3"><span class="formValidation"></span>			
+		</div>
+	</div>
+</fieldset>
+<input type="hidden" name="form[formId]" value="1"></form></div>
                                     </div>
                                 </div>
                             </div>
