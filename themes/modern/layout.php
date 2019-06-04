@@ -404,7 +404,12 @@
                                                         </p>
                                                     </div>
                                                     <div class="ariab_phone">
-<p>تلفـن: <br> فکس: <br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-family: myriad; font-size: 18px;">  </span><br>&nbsp; <i class="fab fa-twitter" class="ahab_social"></i> <i class="fab fa-google-plus-g" class="ahab_social"></i> <i class="fab fa-instagram" class="ahab_social"></i><br>&nbsp;</p>
+                                                        <p>تلفـن: <br> فکس: <br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-family: myriad; font-size: 18px;">  </span><br>&nbsp; 
+                                                        <div>
+                                                            <i class="fab fa-twitter" style="font-size: 2em;color: cadetblue;" class="ahab_social"></i> 
+                                                            <i class="fab fa-google-plus-g" class="ahab_social" style="font-size: 2em;color: firebrick;"></i> 
+                                                            <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i><br>&nbsp;</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
