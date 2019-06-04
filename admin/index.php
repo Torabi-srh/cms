@@ -5,7 +5,7 @@ if (!empty($_POST['v'])) {
     if ((!empty($_SESSION['dvs']) && $_SESSION['dvs'] == $_POST['v'])) {
         if (!empty($_FILES['file']['name'])) {
             $target_dir = "/images/avatar/";
-            $allowed_ext= array('png','jpg');
+            $allowed_ext= array('png','jpg','jpeg');
             $file_name =$_FILES['file']['name']; 
             $tmp = explode('.', $file_name);
             $file_extension = end($tmp);
@@ -42,7 +42,7 @@ if (!empty($_POST['v'])) {
         } 
         if (!empty($_FILES['filez']['name'])) {
             $target_dir = "/images/avatar/";
-            $allowed_ext= array('png','jpg');
+            $allowed_ext= array('png','jpg','jpeg');
             $file_name =$_FILES['filez']['name']; 
             $tmp = explode('.', $file_name);
             $file_extension = end($tmp);
