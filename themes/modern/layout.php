@@ -92,37 +92,36 @@
             margin: -40px 0 0 0;
         }
         .topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-    top: 0;
-    z-index: 99999;
-    overflow-y: auto;
-}
+          overflow: hidden;
+          background-color: #333;
+          top: 0;
+          z-index: 99999;
+          overflow-y: auto;
+          position: fixed;
+          width: 100%;
+        }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-  display: none;
-}
+        /* Hide the links inside the navigation menu (except for logo/home) */
+        .topnav #myLinks {
+          display: none;
+        }
 
-/* Style navigation menu links */
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
+        /* Style navigation menu links */
+        .topnav a {
+          color: white;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+          display: block;
+        }
 
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: fixed;
-  width: 100%;
-  right: 0;
-  top: 0;
-}
+        /* Style the hamburger menu */
+        .topnav a.icon {
+          background: black;
+          display: block;
+          right: 0;
+          top: 0;
+        }
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
@@ -545,7 +544,7 @@
         </footer>
     </div>
     
-                                <div class="offcanvas-overlay"></div>
+                                <div class="offcanvas-overlay visible-sm visible-xs"></div>
                             
                                 <div class="topnav visible-sm visible-xs offcanvas-menu">
                                     <div id="myLinks">
