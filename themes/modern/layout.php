@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php echo ($page_direction == 'rtl' ? 'xml:lang="fa-ir" lang="fa-ir" dir="rtl"'  : 'xml:lang="en-gb" dir="ltr" slick-uniqueid="3" lang="en-gb"') ?>>
 <head>
     <link href="/css/jcemediabox/jcemediabox.css?3ab6d4490e67378d035cce4c84ffa080" rel="stylesheet" type="text/css" />
@@ -91,6 +91,50 @@
             padding: 30px 0px 20px;
             margin: -40px 0 0 0;
         }
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+    top: 0;
+    z-index: 99999;
+    overflow-y: auto;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
     <script src="/js/jquery.min.js" type="text/javascript"></script>
@@ -200,7 +244,7 @@
                     <div id="sp-menu" class="col-sm-12 col-md-12">
                         <div class="sp-column ">
                             <div class='sp-megamenu-wrapper'>
-                                <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#">
+                                <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#" class="icon" onclick="myFunction()">
                                     <i class="fa fa-bars"></i>
                                 </a>
                                 <ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs" <?php echo ($page_direction == 'rtl' ? ''  : 'style="direction: ltr !important;"') ?>>
@@ -214,6 +258,17 @@
                                     </li>
                                     <?php endforeach; ?>
                                 </ul>
+                                <script>
+                                    function myFunction() {
+                                      var x = document.getElementById("myLinks");
+                                      if (x.style.display === "block") {
+                                        x.style.display = "none";
+                                      } else {
+                                        x.style.display = "block";
+                                      }
+                                    }
+                                </script>
+
                             </div>
                         </div>
                     </div>
@@ -489,7 +544,20 @@
             </div>
         </footer>
     </div>
-
+    
+                                <div class="offcanvas-overlay"></div>
+                            
+                                <div class="topnav visible-sm visible-xs offcanvas-menu">
+                                    <div id="myLinks">
+                                    <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
+                                    <?php if($page_menu['visibility']==0) continue; ?>
+                                        <a class="<?php if(!empty($cid) && $cid == $page_menu['id']) echo "current-item active"; ?>" href="/index.php?cid=<?php echo $page_menu['id'] ?>">
+                                            <i class="<?php echo $page_menu['ico'] ?>"></i>
+                                            <?php echo $page_menu['text'] ?>
+                                        </a>
+                                    <?php endforeach; ?>
+                                    </div>
+                                </div>
 </body>
 
 </html>
