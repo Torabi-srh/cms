@@ -1025,6 +1025,7 @@
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\settings.css" />
     <Content Include="css\skitter.css" />
+    <Content Include="css\slicknav.min.css" />
     <Content Include="css\static-captions.css" />
     <Content Include="css\style.css" />
     <Content Include="css\tabs_slides.css" />
@@ -1585,6 +1586,7 @@
     <Content Include="js\jquery-1.12.2.js" />
     <Content Include="js\jquery.easing.min.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.slicknav.js" />
     <Content Include="js\jquery.stellar.js" />
     <Content Include="js\jquery.themepunch.revolution.min.js" />
     <Content Include="js\jquery.themepunch.tools.min.js" />

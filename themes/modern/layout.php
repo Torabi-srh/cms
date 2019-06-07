@@ -134,6 +134,15 @@
   background-color: #4CAF50;
   color: white;
 }
+.topnav .closebtn { 
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.topnav a:hover {
+  color: #f1f1f1;
+}
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
     <script src="/js/jquery.min.js" type="text/javascript"></script>
@@ -460,10 +469,10 @@
                                                     <div class="ariab_phone">
                                                         <p>تلفـن: <br> فکس: <br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-family: myriad; font-size: 18px;">  </span><br>&nbsp; 
                                                         </p>
-                                                        <div style="text-align: end;">
-                                                            <i class="fab fa-twitter" style="font-size: 2em;color: cadetblue;" class="ahab_social"></i> 
+                                                        <div style="text-align: end;background-image: url("/images/insta.jpg");">
+                                                           <!-- <i class="fab fa-twitter" style="font-size: 2em;color: cadetblue;" class="ahab_social"></i> 
                                                             <i class="fab fa-google-plus-g" class="ahab_social" style="font-size: 2em;color: firebrick;"></i> 
-                                                            <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i>
+                                                            <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i>-->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -496,7 +505,7 @@
     <input type="text" id="ct_email" name="ct_email" placeholder="Email..">
     <label for="subject" style="font-size: inherit;font-weight: inherit;">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-    <input type="submit" value="Submit" style="float: inline-end;margin-top: -30px;">
+    <input type="submit" value="Submit" style="float: left;margin-top: -30px;">
                                             </form>
                                         </div>
                                     </div>
@@ -544,11 +553,11 @@
         </footer>
     </div>
     
-                                <div class="offcanvas-overlay visible-sm visible-xs"></div>
+                                <div id="offcanvasoverlay" class="offcanvas-overlay visible-sm visible-xs"></div>
                             
                                 <div class="topnav visible-sm visible-xs offcanvas-menu">
                                     <div id="myLinks">
-                                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                    <a href="javascript:void(0)" class="closebtn" onclick="cmf()">&times;</a>
                                     <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
                                     <?php if($page_menu['visibility']==0) continue; ?>
                                         <a class="<?php if(!empty($cid) && $cid == $page_menu['id']) echo "current-item active"; ?>" href="/index.php?cid=<?php echo $page_menu['id'] ?>">
@@ -558,6 +567,10 @@
                                     <?php endforeach; ?>
                                     </div>
                                 </div>
+                                <script>
+                                function cmf() {
+                                  document.getElementById("offcanvasoverlay").click();
+                                }
+                                </script> 
 </body>
-
 </html>
