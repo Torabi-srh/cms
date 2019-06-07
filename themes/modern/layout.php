@@ -143,6 +143,81 @@
 .topnav a:hover {
   color: #f1f1f1;
 }
+/* Footer */
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#footer {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #499457 !important;
+}
+#footer h5{
+	padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+	margin-top:-10px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#ffffff;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
     <script src="/js/jquery.min.js" type="text/javascript"></script>
@@ -446,7 +521,7 @@
             </div>
         </section>
         <section id="sp-clients-title"></section>
-        <section id="sp-bottom">
+        <!--<section id="sp-bottom">
             <div class="container">
                 <div class="row">
                     <div class="row">
@@ -460,17 +535,14 @@
                                                 <div class="hmcl hmspbttm_1_of_2">
                                                     <div class="ariab_address">
                                                         <p>
-                                                            Tehran Province, Tehran, Tehran, no.1643 safiran building, Shariati St
+                                                            Tehran, Shariati avenue, lower than Sadr Bridge, 1643, 4th floor, Unit B4
                                                         </p>
                                                     </div>
                                                     <div class="ariab_phone">
-                                                        <p>تلفـن: <br> فکس: <br>
+                                                        <p>تلفـن: 22636037 <br> فکس: 22618231 <br>
                                                         </p>
                                                         <div>
                                                         <a href="https://www.instagram.com/arianborna/"><img src="/images/insta.jpg"/></a>
-                                                           <!-- <i class="fab fa-twitter" style="font-size: 2em;color: cadetblue;" class="ahab_social"></i> 
-                                                            <i class="fab fa-google-plus-g" class="ahab_social" style="font-size: 2em;color: firebrick;"></i> 
-                                                            <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i>-->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -513,8 +585,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <footer id="sp-footer">
+        </section>-->
+        <!--<footer id="sp-footer">
             <div class="container">
                 <div class="row">
                     <div id="sp-footer1" class="col-xs-12 col-sm-6 col-md-6">
@@ -548,7 +620,29 @@
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer>-->
+      <section id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="https://www.instagram.com/arianborna/"><i class="fab fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="mailto:info@ariyanborna.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p>Architectural group <u><a href="/"> Arianborna </a></u> Design, comments, run</p>
+					<p class="h6">&copy All right Reversed</p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
     </div>
     
                                 <div id="offcanvasoverlay" class="offcanvas-overlay visible-sm visible-xs"></div>
