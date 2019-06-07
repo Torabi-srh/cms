@@ -321,15 +321,16 @@ section .section-title {
                 </div>
             </div>
         </header>
+        <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#" class="icon" style="margin-right: 18px;" onclick="myFunction()">
+                                    <i class="fa fa-bars"></i>
+                                </a>
         <section id="sp-main-menu" class="visible-md visible-lg sp-menu-row">
             <div class="container">
                 <div class="row">
                     <div id="sp-menu" class="col-sm-12 col-md-12">
                         <div class="sp-column ">
                             <div class='sp-megamenu-wrapper'>
-                                <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#" class="icon" onclick="myFunction()">
-                                    <i class="fa fa-bars"></i>
-                                </a>
+                                
                                 <ul class="sp-megamenu-parent menu-fade hidden-sm hidden-xs" <?php echo ($page_direction == 'rtl' ? ''  : 'style="direction: ltr !important;"') ?>>
                                     <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
                                     <?php if($page_menu['visibility']==0) continue; ?>
