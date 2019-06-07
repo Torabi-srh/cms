@@ -457,9 +457,6 @@
 
                                         <div class="custom">
                                             <div class="hmsct hmgrp">
-                                                <div class="hmcl hmspbttm_2_of_2">
-                                                    <div class="ariab_map"></div>
-                                                </div>
                                                 <div class="hmcl hmspbttm_1_of_2">
                                                     <div class="ariab_address">
                                                         <p>
