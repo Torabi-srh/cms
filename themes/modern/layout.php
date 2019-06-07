@@ -467,7 +467,7 @@
                                                         </p>
                                                     </div>
                                                     <div class="ariab_phone">
-                                                        <p>تلفـن: <br> فکس: <br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-family: myriad; font-size: 18px;">  </span><br>&nbsp; 
+                                                        <p>تلفـن: <br> فکس: <br>
                                                         </p>
                                                         <div>
                                                         <a href=""><img src="/images/insta.jpg"/></a>
