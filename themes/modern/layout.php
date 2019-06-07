@@ -469,7 +469,7 @@
                                                     <div class="ariab_phone">
                                                         <p>تلفـن: <br> فکس: <br>&nbsp; &nbsp; &nbsp; &nbsp; <span style="font-family: myriad; font-size: 18px;">  </span><br>&nbsp; 
                                                         </p>
-                                                        <div style="text-align: end;background-image: url("/images/insta.jpg");">
+                                                        <div style='text-align: end;background-image: url("/images/insta.jpg");'>
                                                            <!-- <i class="fab fa-twitter" style="font-size: 2em;color: cadetblue;" class="ahab_social"></i> 
                                                             <i class="fab fa-google-plus-g" class="ahab_social" style="font-size: 2em;color: firebrick;"></i> 
                                                             <i class="fab fa-instagram" class="ahab_social" style="font-size: 2em;color: darkmagenta;"></i>-->
