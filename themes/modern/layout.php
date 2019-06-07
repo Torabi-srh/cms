@@ -321,7 +321,7 @@ section .section-title {
                 </div>
             </div>
         </header>
-        <section id="sp-main-menu" class=" sp-menu-row">
+        <section id="sp-main-menu" class="visible-md visible-lg sp-menu-row">
             <div class="container">
                 <div class="row">
                     <div id="sp-menu" class="col-sm-12 col-md-12">
@@ -520,7 +520,7 @@ section .section-title {
                 </div>
             </div>
         </section>
-        <section id="sp-clients-title"></section>
+        <!--<section id="sp-clients-title"></section>-->
         <!--<section id="sp-bottom">
             <div class="container">
                 <div class="row">
