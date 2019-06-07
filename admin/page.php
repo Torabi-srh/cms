@@ -158,7 +158,7 @@ window.onload = function() {
                     </div>
                     <div class="panel-body">
                         <div class="col-sm-4 checkbox">
-                          <label <?php echo ((!empty($_vib)&&$_vib=="1")?'class="active"':""); ?>><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($_vib)&&$_vib=="1")?'checked="checked" class="active"':""); ?>>Invisibale</label>
+                          <label <?php echo ((!empty($_vib)&&$_vib=="1")?'class="active"':""); ?>><input type="checkbox" name="vib" id="vib" <?php echo ((!empty($_vib)&&$_vib=="1")?'checked="checked" class="active"':""); ?>>Visible</label>
                         </div>
                         <div class="col-sm-4 checkbox">
                           <label <?php echo ((!empty($_slds)&&$_slds=="1")?'class="active"':""); ?>><input type="checkbox" name="slds" id="slds" <?php echo ((!empty($_slds)&&$_slds=="1")?'checked="checked" class="active"':""); ?>>Show silder</label>
