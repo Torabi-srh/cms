@@ -16,7 +16,7 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                 $error =  'toastr["error"]("fatal error", "fatal error");';
             }
         } elseif (!empty($_FILES['file'])) {
-        var_dump($_FILES['file']['tmp_name']);die();
+        var_dump($_FILES);die();
             foreach($_FILES['file']['tmp_name'] as $key => $value) {
                 $tempFile = $_FILES['file']['tmp_name'][$key];
                 $target_dir = "/assets/files/";
