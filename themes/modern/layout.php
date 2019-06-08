@@ -345,7 +345,7 @@ section .section-title {
                                     </li>
                                     <?php endforeach; ?>
                                 </ul>
-                               <!-- <script>
+                                <!--<script>
                                     function myFunction() {
                                       var x = document.getElementById("myLinks");
                                       if (x.style.display === "block") {
@@ -650,8 +650,8 @@ section .section-title {
     </div>
     
                                 <div id="offcanvasoverlay" class="offcanvas-overlay visible-sm visible-xs"></div>
-                            
-                                <div class="topnav visible-sm visible-xs offcanvas-menu">
+                            <!--topnav-->
+                                <div class=" visible-sm visible-xs offcanvas-menu">
                                     <div id="myLinks">
                                     <a href="#" class="closebtn" onclick="cmf()">&times;</a>
                                     <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
