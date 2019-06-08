@@ -25611,7 +25611,7 @@ body.offcanvas .offcanvas-overlay {
     z-index: 9999
 }
 
-.close-offcanvas {
+/*.close-offcanvas {
     position: absolute;
     top: 15px;
     right: 20px;
@@ -25624,7 +25624,7 @@ body.offcanvas .offcanvas-overlay {
     text-align: center;
     font-size: 12px;
     background: rgba(0,0,0,0.3)
-}
+}*/
 
     .close-offcanvas:hover {
         background: rgba(0,0,0,0.5);
