@@ -20,26 +20,26 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                 $tempFile = $_FILES['file']['tmp_name'][$key];
                 $target_dir = "/assets/files/";
                 $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg');
-                $file_name =$_FILES['file']['name']; 
+                $file_name =$_FILES['file']['name'][$key]; 
                 $tmp = explode('.', $file_name);
                 $file_extension = end($tmp);
                 $file_ext = strtolower($file_extension);
-                $target_file = $target_dir . SaltMD5(basename($_FILES["file"]["name"]).site_id.random_string()).'.'.$file_extension;
+                $target_file = $target_dir . SaltMD5(basename($file_name).site_id.random_string()).'.'.$file_extension;
                 while (file_exists($target_file)) {
-                    $target_file = $target_dir . SaltMD5(basename($_FILES["file"]["name"]).site_id.random_string()).'.'.$file_extension;
+                    $target_file = $target_dir . SaltMD5(basename($file_name).site_id.random_string()).'.'.$file_extension;
                 }
-                $file_size=$_FILES['file']['size'];
+                $file_size=$_FILES['file']['size'][$key];
                 $file_tmp= $tempFile;
                 $type = pathinfo($file_tmp, PATHINFO_EXTENSION);
                 $data = file_get_contents($file_tmp);
-                $hash = sha1($_FILES["file"]["name"]);
+                $hash = sha1($file_name);
                  
                 if(in_array($file_ext,$allowed_ext) === false) {
                     $error =  'toastr["error"]("Extension not allowed", "Upload error");'; 
                 } elseif($file_size > 2097152) {
                     $error =  'toastr["error"]("File size must be under 2mb", "Upload error");'; 
                 } else {
-                    if (move_uploaded_file($_FILES["file"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . $target_file)) { 
+                    if (move_uploaded_file($tempFile, $_SERVER['DOCUMENT_ROOT'] . $target_file)) { 
                         $sql = "insert into `files`(`bid`,`name`,`path`,`hash`) VALUES (".site_id .", '".$file_name."', '".$target_file."', '".$hash."')";
                         if ($stmt = $mysqli->prepare($sql)) {
                             $stmt->execute();
