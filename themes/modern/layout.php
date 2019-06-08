@@ -653,6 +653,8 @@ section .section-title {
                             <!---->
                                 <div class="topnav visible-sm visible-xs offcanvas-menu">
                                     <div id="myLinks">
+                                    <div class="container">
+  <div class="row">
                                         <div class="col-sm">
                                           <a id="offcanvas-toggler" href="#" class="closebtn">&times;</a>
                                         </div>
@@ -664,6 +666,8 @@ section .section-title {
                                             <?php echo $page_menu['text'] ?>
                                         </a>
                                     <?php endforeach; ?>
+                                        </div> 
+                                    </div>
                                         </div> 
                                     </div>
                                 </div>
