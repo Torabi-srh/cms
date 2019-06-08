@@ -121,7 +121,6 @@ require '../assets/db.php';
                                                 </div>
                                                 <div class="modal-footer">
                                                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel" />
-                                                    <button id="dropzoneSubmit" class="uk-button uk-button-primary">Submit</button>
                                                     <input type="submit" id="add-row" class="btn btn-success" value="Done" />
                                                 </div>
                                             </form>
