@@ -243,8 +243,7 @@ if (!empty($cid)) {
                 $post_content = html_entity_decode(htmlspecialchars_decode($post_content));
             }
     
-    $sql = "SELECT `showsilder` FROM `post` where `id` = '". $cid ."'";
-                echo $sql;die();
+    $sql = "SELECT `showsilder` FROM `menu` where `id` = '". $cid ."'"; 
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->execute();
         $stmt->store_result();
