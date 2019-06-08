@@ -77,6 +77,7 @@
     <Compile Include="themes\classic\layout.php" />
     <Compile Include="themes\modern\galary.php" />
     <Compile Include="themes\modern\layout.php" />
+    <Compile Include="themes\pure\layout.php" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".htaccess" />
@@ -2125,6 +2126,7 @@
     <Content Include="themes\modern\js\jquery.skitter.min.js" />
     <Content Include="themes\modern\js\main.js" />
     <Content Include="themes\modern\js\skitter.js" />
+    <Content Include="themes\pure\css\bulma.min.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="admin\" />
@@ -2484,5 +2486,9 @@
     <Folder Include="themes\modern\images\" />
     <Folder Include="themes\modern\images\backup\" />
     <Folder Include="themes\modern\js\" />
+    <Folder Include="themes\pure\" />
+    <Folder Include="themes\pure\css\" />
+    <Folder Include="themes\pure\images\" />
+    <Folder Include="themes\pure\js\" />
   </ItemGroup>
 </Project>
