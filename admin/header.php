@@ -57,7 +57,7 @@ if (isUrlSafe($SERVER_REQ) > -1) {
         <script>
 $(function() {
     $('form').areYouSure();
-}
+});
 </script>
     </head>
     <body> 
