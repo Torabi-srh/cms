@@ -16,42 +16,45 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                 $error =  'toastr["error"]("fatal error", "fatal error");';
             }
         } elseif (!empty($_FILES['file'])) {
-            $target_dir = "/assets/files/";
-            $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg');
-            $file_name =$_FILES['file']['name']; 
-            $tmp = explode('.', $file_name);
-            $file_extension = end($tmp);
-            $file_ext = strtolower($file_extension);
-            $target_file = $target_dir . SaltMD5(basename($_FILES["file"]["name"]).site_id.random_string()).'.'.$file_extension;
-            while (file_exists($target_file)) {
+            foreach($_FILES['file']['tmp_name'] as $key => $value) {
+                $tempFile = $_FILES['file']['tmp_name'][$key];
+                $target_dir = "/assets/files/";
+                $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg');
+                $file_name =$_FILES['file']['name']; 
+                $tmp = explode('.', $file_name);
+                $file_extension = end($tmp);
+                $file_ext = strtolower($file_extension);
                 $target_file = $target_dir . SaltMD5(basename($_FILES["file"]["name"]).site_id.random_string()).'.'.$file_extension;
-            }
-            $file_size=$_FILES['file']['size'];
-            $file_tmp= $_FILES['file']['tmp_name'];
-            $type = pathinfo($file_tmp, PATHINFO_EXTENSION);
-            $data = file_get_contents($file_tmp);
-            $hash = sha1($_FILES["file"]["name"]);
+                while (file_exists($target_file)) {
+                    $target_file = $target_dir . SaltMD5(basename($_FILES["file"]["name"]).site_id.random_string()).'.'.$file_extension;
+                }
+                $file_size=$_FILES['file']['size'];
+                $file_tmp= $tempFile;
+                $type = pathinfo($file_tmp, PATHINFO_EXTENSION);
+                $data = file_get_contents($file_tmp);
+                $hash = sha1($_FILES["file"]["name"]);
                  
-            if(in_array($file_ext,$allowed_ext) === false) {
-                $error =  'toastr["error"]("Extension not allowed", "Upload error");'; 
-            } elseif($file_size > 2097152) {
-                $error =  'toastr["error"]("File size must be under 2mb", "Upload error");'; 
-            } else {
-                if (move_uploaded_file($_FILES["file"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . $target_file)) { 
-                    $sql = "insert into `files`(`bid`,`name`,`path`,`hash`) VALUES (".site_id .", '".$file_name."', '".$target_file."', '".$hash."')";
-                    if ($stmt = $mysqli->prepare($sql)) {
-                        $stmt->execute();
-                        if($stmt->affected_rows == 1) { 
-                            $error =  'toastr["success"]("File uploaded", "File uploaded");'; 
-                        } else { 
+                if(in_array($file_ext,$allowed_ext) === false) {
+                    $error =  'toastr["error"]("Extension not allowed", "Upload error");'; 
+                } elseif($file_size > 2097152) {
+                    $error =  'toastr["error"]("File size must be under 2mb", "Upload error");'; 
+                } else {
+                    if (move_uploaded_file($_FILES["file"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . $target_file)) { 
+                        $sql = "insert into `files`(`bid`,`name`,`path`,`hash`) VALUES (".site_id .", '".$file_name."', '".$target_file."', '".$hash."')";
+                        if ($stmt = $mysqli->prepare($sql)) {
+                            $stmt->execute();
+                            if($stmt->affected_rows == 1) { 
+                                $error =  'toastr["success"]("File uploaded", "File uploaded");'; 
+                            } else { 
+                                $error =  'toastr["error"]("fatal error", "fatal error");';
+                            }
+                        } else {
                             $error =  'toastr["error"]("fatal error", "fatal error");';
                         }
                     } else {
-                        $error =  'toastr["error"]("fatal error", "fatal error");';
-                    }
-                } else {
-                        $error =  'toastr["error"]("fatal error", "fatal error");';
-                } 
+                            $error =  'toastr["error"]("fatal error", "fatal error");';
+                    } 
+                }
             }
         }
     } else {
@@ -109,7 +112,69 @@ require '../assets/db.php';
     }
 }
                                                     </script>
+                                                    
+<script>
+// disable auto discover
+Dropzone.autoDiscover = false;
+// init dropzone on id (form or div)
+$(document).ready(function() {
+    var myDropzone = new Dropzone("#myDropzone", {
+        url: "<?=$page->url?>",
+        paramName: "file",
+        autoProcessQueue: false,
+        uploadMultiple: true, // uplaod files in a single request
+        parallelUploads: 100, // use it with uploadMultiple
+        maxFilesize: 1, // MB
+        maxFiles: 5,
+        acceptedFiles: ".jpg, .jpeg, .png, .gif, .pdf",
+        addRemoveLinks: true,
+        // Language Strings
+        dictFileTooBig: "File is to big ({{filesize}}mb). Max allowed file size is {{maxFilesize}}mb",
+        dictInvalidFileType: "Invalid File Type",
+        dictCancelUpload: "Cancel",
+        dictRemoveFile: "Remove",
+        dictMaxFilesExceeded: "Only {{maxFiles}} files are allowed",
+        dictDefaultMessage: "Drop files here to upload",
+    });
+});
+Dropzone.options.myDropzone = {
+    // The setting up of the dropzone
+    init: function() {
+        var myDropzone = this;
+        // First change the button to actually tell Dropzone to process the queue.
+        $("#dropzoneSubmit").on("click", function(e) {
+            // Make sure that the form isn't actually being sent.
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (myDropzone.files != "") {
+                myDropzone.processQueue();
+            } else {
+                $("#myDropzone").submit();
+            }
+        });
+        // on add file
+        this.on("addedfile", function(file) {
+            // console.log(file);
+        });
+        // on error
+        this.on("error", function(file, response) {
+            // console.log(response);
+        });
+        // on start
+        this.on("sendingmultiple", function(file) {
+             // console.log(file);
+        });
+        // on success
+        this.on("successmultiple", function(file) {
+            // submit form
+            $("#form").submit();
+        });
+    }
+};
+</script>
                                                     <div class="form-group" style="text-align: center;">
+                                                    <div id="myDropzone" class="dropzone"></div>
                                                         <input type="file" id="file" name="file" onchange="fc()" class="inputfile" accept="image/*, application/msword, application/vnd.ms-excel, application/vnd.ms-powerpoint,text/plain, application/pdf, .docx,.xlsx,.pptx" data-multiple-caption="{count} files selected" required>  
                                                         <label for="file"><figure><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg></figure>
                                                             <span id="fcn"></span></label>
@@ -117,6 +182,7 @@ require '../assets/db.php';
                                                 </div>
                                                 <div class="modal-footer">
                                                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel" />
+                                                    <button id="dropzoneSubmit" class="uk-button uk-button-primary">Submit</button>
                                                     <input type="submit" id="add-row" class="btn btn-success" value="Done" />
                                                 </div>
                                             </form>
