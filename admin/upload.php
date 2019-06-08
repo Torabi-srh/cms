@@ -15,10 +15,9 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
             } else {
                 $error =  'toastr["error"]("fatal error", "fatal error");';
             }
-        } elseif (!empty($_FILES['file'])) { 
-        var_dump($_FILES);die();
-            foreach($_FILES['file'] as $key => $value) {
-                $tempFile = $_FILES['file'][$key]['tmp_name'];
+    } elseif (!empty($_FILES['file'])) {  
+            foreach($_FILES['file']['tmp_name'] as $key => $value) {
+                $tempFile = $_FILES['file']['tmp_name'][$key];
                 $target_dir = "/assets/files/";
                 $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg');
                 $file_name =$_FILES['file']['name']; 
