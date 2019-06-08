@@ -324,11 +324,9 @@ section .section-title {
                 </div>
             </div>
         </header>
-        <!--<a id="offcanvas-toggler" class="visible-sm visible-xs" href="#" class="icon" style="margin-right: 18px;" onclick="myFunction()">
+      <a id="offcanvas-toggler" class="visible-sm visible-xs" href="#" class="icon" style="margin-right: 18px;" onclick="myFunction()">
                                     <i class="fa fa-bars"></i>
-                                </a>-->
-        <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay"><i class="fa fa-bars"></i></button>
-
+                                </a>
         <section id="sp-main-menu" class="visible-md visible-lg sp-menu-row">
             <div class="container">
                 <div class="row">
@@ -653,24 +651,6 @@ section .section-title {
     
                                 <div id="offcanvasoverlay" class="offcanvas-overlay visible-sm visible-xs"></div>
                             
-                                <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-                                    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-
-                                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                                        <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
-                                    <?php if($page_menu['visibility']==0) continue; ?>
-                                            <li class="<?php if(!empty($cid) && $cid == $page_menu['id']) echo "uk-active"; ?>"><a href="/index.php?cid=<?php echo $page_menu['id'] ?>">
-                                            <i class="<?php echo $page_menu['ico'] ?>"></i>
-                                            <?php echo $page_menu['text'] ?>
-                                            </a>
-                                            </li>
-                                    <?php endforeach; ?>
-                                        </ul>
-
-                                    </div>
-                                </div>
-
-                                <?php /*
                                 <div class="topnav visible-sm visible-xs offcanvas-menu">
                                     <div id="myLinks">
                                     <a href="javascript:void(0)" class="closebtn" onclick="cmf()">&times;</a>
@@ -688,6 +668,6 @@ section .section-title {
                                   document.getElementById("offcanvasoverlay").click();
                                 }
                                 </script>
-                                */ ?>
+                                
 </body>
 </html>
