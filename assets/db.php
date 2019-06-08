@@ -234,7 +234,7 @@ if (!empty($cid)) {
     $post_mid;
     $post_content;
     $page_parent;
-    $page_showslider;
+    $page_showslider = 1;
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->execute();
         $stmt->store_result();
@@ -249,6 +249,7 @@ if (!empty($cid)) {
         $stmt->store_result();
         $stmt->bind_result($page_showslider);
                 $stmt->fetch();
+                echo $page_showslider;die();
             }
 }
 ?>
