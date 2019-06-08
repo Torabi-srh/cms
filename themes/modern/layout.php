@@ -656,7 +656,7 @@ section .section-title {
                                     <div class="container">
   <div class="row">
                                         <div class="col-sm">
-                                          <a id="offcanvas-toggler" href="#" class="closebtn">&times;</a>
+                                          <a id="offcanvas-toggler" href="#" style="float: left;margin-top: 0px;" class="closebtn" onclick="cmf()">&times;</a>
                                         </div>
                                         <div class="col-sm">
                                            <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
@@ -673,7 +673,7 @@ section .section-title {
                                 </div>
                                 <script>
                                 function cmf() {
-                                     document.getElementById("topnav").style.width = "0";
+document.getElementById("offcanvas-toggler").click();
                                 }
                                 </script>
                                 <!--document.getElementById("offcanvasoverlay").click();-->
