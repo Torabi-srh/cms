@@ -243,13 +243,13 @@ if (!empty($cid)) {
                 $post_content = html_entity_decode(htmlspecialchars_decode($post_content));
             }
     
+                echo $page_showslider;die();
     $sql = "SELECT `showsilder` FROM `post` where `id` = '". $cid ."'";
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->execute();
         $stmt->store_result();
         $stmt->bind_result($page_showslider);
                 $stmt->fetch();
-                echo $page_showslider;die();
             }
 }
 ?>
