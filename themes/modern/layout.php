@@ -345,7 +345,7 @@ section .section-title {
                                     </li>
                                     <?php endforeach; ?>
                                 </ul>
-                                <script>
+                               <!-- <script>
                                     function myFunction() {
                                       var x = document.getElementById("myLinks");
                                       if (x.style.display === "block") {
@@ -354,7 +354,7 @@ section .section-title {
                                         x.style.display = "block";
                                       }
                                     }
-                                </script>
+                                </script>-->
 
                             </div>
                         </div>
