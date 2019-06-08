@@ -106,7 +106,7 @@
 
         /* Hide the links inside the navigation menu (except for logo/home) */
         .topnav #myLinks {
-          display: none;
+         // display: none;
         }
 
         /* Style navigation menu links */
@@ -650,8 +650,8 @@ section .section-title {
     </div>
     
                                 <div id="offcanvasoverlay" class="offcanvas-overlay visible-sm visible-xs"></div>
-                            <!--topnav-->
-                                <div class=" visible-sm visible-xs offcanvas-menu">
+                            <!---->
+                                <div class="topnav visible-sm visible-xs offcanvas-menu">
                                     <div id="myLinks">
                                     <a href="#" class="closebtn" onclick="cmf()">&times;</a>
                                     <?php if(!empty($page_menus["l$current_lid"])) foreach ($page_menus["l$current_lid"] as $page_menu): ?>
