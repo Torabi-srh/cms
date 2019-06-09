@@ -9,11 +9,12 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                 $stmt->execute();
                 if($stmt->affected_rows == 1) {
                         $error =  'toastr["success"]("successfuly deleted", "file delete");';
+                        safeRedirect("/admin/upload.php");die();exit();
                 } else {
-                    $error =  'toastr["error"]("fatal error5", "fatal error");';
+                    $error =  'toastr["error"]("file not found", "fatal error");';
                 }
             } else {
-                $error =  'toastr["error"]("fatal error6", "fatal error");';
+                $error =  'toastr["error"]("fatal error", "fatal error");';
             }
     } elseif (!empty($_FILES['file'])) {  
             foreach($_FILES['file']['tmp_name'] as $key => $value) {
