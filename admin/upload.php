@@ -37,8 +37,8 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                  
                 if(in_array($file_ext,$allowed_ext) === false) {
                     $error =  'toastr["error"]("Extension not allowed", "Upload error");'; 
-                } elseif($file_size > 2097152) {
-                    $error =  'toastr["error"]("File size must be under 2mb", "Upload error");'; 
+                } elseif($file_size > 6097152) {
+                    $error =  'toastr["error"]("File size must be under 5mb", "Upload error");'; 
                 } else {
                     if (move_uploaded_file($tempFile, $_SERVER['DOCUMENT_ROOT'] . $target_file)) { 
                         $sql = "insert into `files`(`bid`,`name`,`path`,`hash`) VALUES (".site_id .", '".$file_name."', '".$target_file."', '".$hash."')";
