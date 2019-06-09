@@ -20,7 +20,7 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
             foreach($_FILES['file']['tmp_name'] as $key => $value) {
                 $tempFile = $_FILES['file']['tmp_name'][$key];
                 $target_dir = "/assets/files/";
-                $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg');
+                $allowed_ext= array('xml','doc','docx','txt','ppt','pptx','xlsx','jpg','png','jpeg','bmp');
                 $file_name =$_FILES['file']['name'][$key]; 
                 $tmp = explode('.', $file_name);
                 $file_extension = end($tmp);
