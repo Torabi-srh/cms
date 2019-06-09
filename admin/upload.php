@@ -10,10 +10,10 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                 if($stmt->affected_rows == 1) {
                         $error =  'toastr["success"]("successfuly deleted", "file delete");';
                 } else {
-                    $error =  'toastr["error"]("fatal error", "fatal error");';
+                    $error =  'toastr["error"]("fatal error5", "fatal error");';
                 }
             } else {
-                $error =  'toastr["error"]("fatal error", "fatal error");';
+                $error =  'toastr["error"]("fatal error6", "fatal error");';
             }
     } elseif (!empty($_FILES['file'])) {  
             foreach($_FILES['file']['tmp_name'] as $key => $value) {
@@ -43,16 +43,16 @@ if (!empty($_POST['nlh']) || (!empty($_GET['v']))) {
                         $sql = "insert into `files`(`bid`,`name`,`path`,`hash`) VALUES (".site_id .", '".$file_name."', '".$target_file."', '".$hash."')";
                         if ($stmt = $mysqli->prepare($sql)) {
                             $stmt->execute();
-                            if($stmt->affected_rows == 1) { 
-                                $error =  'toastr["success"]("File uploaded", "File uploaded");'; 
-                            } else { 
-                                $error =  'toastr["error"]("fatal error", "fatal error");';
+                            if ($stmt->affected_rows == 1) {
+                                $error = 'toastr["success"]("File uploaded", "File uploaded");'; 
+                            } else {
+                                $error = 'toastr["error"]("fatal error1", "fatal error");';
                             }
                         } else {
-                            $error =  'toastr["error"]("fatal error", "fatal error");';
+                            $error = 'toastr["error"]("fatal error2", "fatal error");';
                         }
                     } else {
-                            $error =  'toastr["error"]("fatal error", "fatal error");';
+                            $error = 'toastr["error"]("fatal error3", "fatal error");';
                     } 
                 }
             }

@@ -84,6 +84,7 @@
     <Content Include="admin\assets\.DS_Store" />
     <Content Include="admin\assets\css\.DS_Store" />
     <Content Include="admin\assets\css\custom.css" />
+    <Content Include="admin\assets\css\dropzone.css" />
     <Content Include="admin\assets\css\fontawesome-iconpicker.min.css" />
     <Content Include="admin\assets\css\space.css" />
     <Content Include="admin\assets\css\space.min.css" />
@@ -92,6 +93,7 @@
     <Content Include="admin\assets\css\themes\admin3.css" />
     <Content Include="admin\assets\js\.DS_Store" />
     <Content Include="admin\assets\js\ays-beforeunload-shim.js" />
+    <Content Include="admin\assets\js\dropzone.js" />
     <Content Include="admin\assets\js\fontawesome-iconpicker.min.js" />
     <Content Include="admin\assets\js\jquery.are-you-sure.js" />
     <Content Include="admin\assets\js\pages\.DS_Store" />
