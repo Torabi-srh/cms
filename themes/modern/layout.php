@@ -689,7 +689,7 @@ section .section-title {
       <script>
          window.addEvent('load', function () {
             // $("#lightgallery").lightGallery(); 
-            $('#lightgallery').lightGallery({
+            document.getElementById('lightgallery').lightGallery({
                 selector: '.item'
             });
         });
