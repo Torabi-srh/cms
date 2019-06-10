@@ -11,6 +11,7 @@
     <?php echo ($page_direction == 'rtl' ? '<link href="/css/bootstrap-rtl.css" rel="stylesheet" type="text/css" />'  : '') ?>
     <?php echo ($page_direction == 'rtl' ? '<link href="/css/front-rtl.css" rel="stylesheet" type="text/css" />'  : '') ?>
     <link href="/css/gallery.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" type="text/css" />
     <link href="/css/djimageslider.css" rel="stylesheet" type="text/css" />
     <?php echo ($page_direction == 'rtl' ? '<link href="/css/djimageslider_rtl.css" rel="stylesheet" type="text/css" />'  : '') ?>
     <link href="/css/mosaic.css" rel="stylesheet" type="text/css" />
@@ -682,7 +683,16 @@ section .section-title {
                                 width: 83%;
 }
                                 </style>
-
+                                    <script src="https://cdn.jsdelivr.net/combine/npm/lightgallery,npm/lg-autoplay,npm/lg-fullscreen,npm/lg-hash,npm/lg-pager,npm/lg-share,npm/lg-thumbnail,npm/lg-video,npm/lg-zoom"></script>
+    <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+      <script>
+        $(document).ready(function () {
+            // $("#lightgallery").lightGallery(); 
+            $('#lightgallery').lightGallery({
+                selector: '.item'
+            });
+        });
+    </script>
                                 <!--document.getElementById("offcanvasoverlay").click();-->
                                 
 </body>
