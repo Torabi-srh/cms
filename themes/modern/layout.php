@@ -225,8 +225,8 @@ section .section-title {
 }
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
-    <!--<script src="/js/jquery.min.js" type="text/javascript"></script>-->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/js/jquery.easing.min.js" type="text/javascript" defer="defer"></script> 
