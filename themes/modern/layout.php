@@ -687,7 +687,7 @@ section .section-title {
                                     <script src="https://cdn.jsdelivr.net/combine/npm/lightgallery,npm/lg-autoplay,npm/lg-fullscreen,npm/lg-hash,npm/lg-pager,npm/lg-share,npm/lg-thumbnail,npm/lg-video,npm/lg-zoom"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
       <script>
-        $(document).ready(function () {
+         window.addEvent('load', function () {
             // $("#lightgallery").lightGallery(); 
             $('#lightgallery').lightGallery({
                 selector: '.item'
