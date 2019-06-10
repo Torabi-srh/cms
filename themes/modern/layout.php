@@ -684,12 +684,13 @@ section .section-title {
                                 width: 83%;
 }
                                 </style>
+                                <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
                                     <script src="https://cdn.jsdelivr.net/combine/npm/lightgallery,npm/lg-autoplay,npm/lg-fullscreen,npm/lg-hash,npm/lg-pager,npm/lg-share,npm/lg-thumbnail,npm/lg-video,npm/lg-zoom"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
       <script>
-         window.addEvent('load', function () {
+        $(document).ready(function () {
             // $("#lightgallery").lightGallery(); 
-            document.getElementById('lightgallery').lightGallery({
+            $('#lightgallery').lightGallery({
                 selector: '.item'
             });
         });
