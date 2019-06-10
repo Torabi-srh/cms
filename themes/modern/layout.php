@@ -226,7 +226,7 @@ section .section-title {
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
     <!--<script src="/js/jquery.min.js" type="text/javascript"></script>-->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/js/jquery.easing.min.js" type="text/javascript" defer="defer"></script> 
@@ -522,7 +522,7 @@ section .section-title {
         <section id="sp-content-top"></section>
         <section id="sp-content-bottom">
             <div class="container">
-                <div class="row">
+                <div class="row" style="margin-right: -15px;margin-left: -15px;">
                     <?php echo $content; ?>
                 </div>
             </div>
