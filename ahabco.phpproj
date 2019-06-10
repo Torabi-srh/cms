@@ -1021,6 +1021,7 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\fonts.css" />
     <Content Include="css\front-rtl.css" />
+    <Content Include="css\gallery.css" />
     <Content Include="css\jcemediabox\jcemediabox.css" />
     <Content Include="css\jcemediabox\style.css" />
     <Content Include="css\main.css" />
