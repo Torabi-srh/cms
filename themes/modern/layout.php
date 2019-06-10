@@ -225,10 +225,11 @@ section .section-title {
 }
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
-    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <!--<script src="/js/jquery.min.js" type="text/javascript"></script>-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/js/jquery.easing.min.js" type="text/javascript" defer="defer"></script>
+    <script src="/js/jquery.easing.min.js" type="text/javascript" defer="defer"></script> 
     <script src="/js/slider.js?v=" type="text/javascript" defer="defer"></script>
     <script src="/js/mootools-core.js?2e4099cbdd3ce8f46c4487db1d55443d" type="text/javascript"></script>
     <script src="/js/mootools-more.js?2e4099cbdd3ce8f46c4487db1d55443d" type="text/javascript"></script>
