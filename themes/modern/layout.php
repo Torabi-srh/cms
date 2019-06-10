@@ -522,7 +522,7 @@ section .section-title {
         <section id="sp-content-top"></section>
         <section id="sp-content-bottom">
             <div class="container">
-                <div class="row" style="margin-right: 0px;margin-left: 0px;">
+                <div class="row" style="margin-right: 5px;margin-left: 5px;">
                     <?php echo $content; ?>
                 </div>
             </div>

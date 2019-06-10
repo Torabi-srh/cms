@@ -217,6 +217,7 @@ window.onload = function() {
  });
 
     CKEDITOR.replace( 'editor', {
+    allowedContent:true,
 extraPlugins: 'bootstrapTabs,codesnippet',
   contentsCss: [ 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' ],
   on: {
