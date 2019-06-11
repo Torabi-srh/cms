@@ -528,7 +528,17 @@ section .section-title {
                 </div>
             </div>
         </section>
-       <script>PDFObject.embed("/assets/files/full-97-4 - l-r_final.pdf", "#pdfexample1");</script>
+        <script>
+       
+PDFObject.embed("https://pdfobject.com/pdf/sample-3pp.pdf", "#pdfexample1");
+
+
+</script>
+     <!--  <script>
+PDFObject.embed("/assets/files/full-97-4 - l-r_final.pdf", "#pdfexample1");
+
+
+</script>-->
       <section id="footer">
 		<div class="container">
 			<div class="row">
