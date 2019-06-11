@@ -521,7 +521,7 @@ section .section-title {
         </section>
         <?php endif; ?>
         <section id="sp-content-top"></section>
-        <section id="sp-content-bottom">
+        <section id="sp-content-bottom" style="min-height: 500px;">
             <div class="container">
                 <div class="row" style="margin-right: 5px;margin-left: 5px;">
                     <?php echo $content; ?>
