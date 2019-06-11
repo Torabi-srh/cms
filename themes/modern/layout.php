@@ -20,7 +20,7 @@
     <link href="/css/static-captions.css" rel="stylesheet" type="text/css" />
             <link rel="stylesheet" href="/css/uikit<?php echo ($page_direction == 'rtl' ? '-rtl'  : '') ?>.min.css" />
         <script src="/js/uikit.min.js"></script>
-        <script src="/js/uikit.min.js"></script>
+        <script src="/js/pdfobject.min.js"></script>
         <script src="/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <style type="text/css">
