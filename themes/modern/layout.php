@@ -20,6 +20,7 @@
     <link href="/css/static-captions.css" rel="stylesheet" type="text/css" />
             <link rel="stylesheet" href="/css/uikit<?php echo ($page_direction == 'rtl' ? '-rtl'  : '') ?>.min.css" />
         <script src="/js/uikit.min.js"></script>
+        <script src="/js/uikit.min.js"></script>
         <script src="/js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <style type="text/css">
@@ -527,107 +528,7 @@ section .section-title {
                 </div>
             </div>
         </section>
-        <!--<section id="sp-clients-title"></section>-->
-        <!--<section id="sp-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="row">
-                        <div id="sp-bottom1" class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="sp-column ">
-                                <div class="sp-module ">
-                                    <div class="sp-module-content">
-
-                                        <div class="custom">
-                                            <div class="hmsct hmgrp">
-                                                <div class="hmcl hmspbttm_1_of_2">
-                                                    <div class="ariab_address">
-                                                        <p>
-                                                            Tehran, Shariati avenue, lower than Sadr Bridge, 1643, 4th floor, Unit B4
-                                                        </p>
-                                                    </div>
-                                                    <div class="ariab_phone">
-                                                        <p>تلفـن: 22636037 <br> فکس: 22618231 <br>
-                                                        </p>
-                                                        <div>
-                                                        <a href="https://www.instagram.com/arianborna/"><img src="/images/insta.jpg"/></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sp-position8" class="col-sm-6 col-md-4 hidden-sm hidden-xs">
-                            <div class="sp-column ">
-                                <div class="sp-module  respnone">
-                                    <div class="sp-module-content">
-                                        <div class="custom respnone">
-                                            <div class="ariab_address">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1618.3796000559942!2d51.4361681!3d35.781291!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcdff568ed3b460a7!2sSafiran+Building!5e0!3m2!1sen!2s!4v1558176666198!5m2!1sen!2s" style="max-width: inherit;width:100%" frameborder="0" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="sp-bottom2" class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="sp-column ">
-                                <div class="sp-module ">
-                                    <div class="sp-module-content">
-                                        <div class="rsform">
-                                            <form method="post" id="userForm" action="/">
-                                                    <label for="ct_email" style="font-size: inherit;font-weight: inherit;">Email</label>
-    <input type="text" id="ct_email" name="ct_email" placeholder="Email..">
-    <label for="subject" style="font-size: inherit;font-weight: inherit;">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
-    <input type="submit" value="Submit" style="float: left;margin-top: -30px;">
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-        <!--<footer id="sp-footer">
-            <div class="container">
-                <div class="row">
-                    <div id="sp-footer1" class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="sp-column ">
-                            <div class="sp-module ">
-                                <div class="sp-module-content">
-
-                                    <div class="custom">
-                                        <div class="ariab_designer"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="sp-footer2" class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="sp-column ">
-                            <div class="sp-module ">
-                                <div class="sp-module-content">
-
-                                    <div class="custom">
-                                        <div class="ariab_copyright">
-                                            <p>
-                                                All Rights Reserved
-                                                <strong>Arianborna</strong>. Copyright &copy; 2019
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>-->
+       <script>PDFObject.embed("/assets/files/full-97-4 - l-r_final.pdf", "#pdfexample1");</script>
       <section id="footer">
 		<div class="container">
 			<div class="row">
