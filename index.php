@@ -56,5 +56,4 @@ if (isset($_GET['gallery'])) {
 } else {
     require "themes/$page_theme/layout.php";
 }
-var_dump( $_SESSION['dir'] ,  $_SESSION['lang']);
 ?>
