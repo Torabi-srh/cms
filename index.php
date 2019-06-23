@@ -8,18 +8,8 @@ if (!empty($_GET['cid'])) {
     $cid = 1;
 }
 $mysqli = isset($mysqli) ? $mysqli : Connection();
-if (!empty($_GET['mclang'])) {
-    foreach ($languages as $lang) {
-        if ($_GET['mclang'] == $lang['id']) {
-            $current_lid = $lang['id'];
-            $page_direction = $lang['dir'];
-            break;
-        }
-    }
-}
-$_SESSION['lang'] = $current_lid;
-$_SESSION['dir'] = $page_direction;
 
+$current_lid = 1;
 require 'assets/db.php';
 user_activitys();
 
@@ -31,7 +21,19 @@ $page_description = "$site_title_name Home page";
 $page_favicon = '/images/header/favicon.png';
 $page_theme = 'modern'; //classic
 $page_direction = 'ltr';
-$current_lid = 1;
+if (!empty($_GET['mclang'])) {
+    foreach ($languages as $lang) {
+        if ($_GET['mclang'] == $lang['id']) {
+            $current_lid = $lang['id'];
+            $page_direction = $lang['dir'];
+            break;
+        }
+    }
+}
+
+$_SESSION['lang'] = $current_lid;
+$_SESSION['dir'] = $page_direction;
+
 if (empty($_SESSION['dir'])) {
     $page_direction = $page_direction;
 } else {
