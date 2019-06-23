@@ -36054,9 +36054,10 @@ table.category {
 .rsform {
     background: #ebebeb;
     border-radius: 5px;
-
+    text-align: center;
     box-shadow: 0 5px 5px 3px rgba(0,0,0,0.2);
-    width: 270px
+    width: 270px;
+    height: 200px;
 }
 
 #sp-content-bottom {
