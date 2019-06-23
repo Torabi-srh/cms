@@ -30,7 +30,6 @@ if (!empty($_GET['mclang'])) {
         }
     }
 }
-var_dump( $_SESSION['dir'] ,  $_SESSION['lang']);
 
 if (empty($_SESSION['dir'])) {
     $page_direction = $page_direction;
@@ -57,4 +56,5 @@ if (isset($_GET['gallery'])) {
 } else {
     require "themes/$page_theme/layout.php";
 }
+var_dump( $_SESSION['dir'] ,  $_SESSION['lang']);
 ?>
