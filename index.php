@@ -31,14 +31,14 @@ if (!empty($_GET['mclang'])) {
     }
 }
 
-echo $_SESSION['lang'] = $current_lid;
-echo $_SESSION['dir'] = $page_direction;
+$_SESSION['lang'] = $current_lid;
 
 if (empty($_SESSION['dir'])) {
     $page_direction = $page_direction;
 } else {
     $page_direction = $_SESSION['dir'];
 }
+$_SESSION['dir'] = $page_direction;
 if (empty($_SESSION['lang'])) {
     $current_lid = $language_lid;
 } else {
