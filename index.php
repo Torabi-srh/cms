@@ -24,21 +24,19 @@ $page_direction = 'ltr';
 if (!empty($_GET['mclang'])) {
     foreach ($languages as $lang) {
         if ($_GET['mclang'] == $lang['id']) {
-            $current_lid = $lang['id'];
-            $page_direction = $lang['dir'];
+            $_SESSION['dir'] = $lang['dir'];
+            $_SESSION['lang'] = $lang['id'];
             break;
         }
     }
 }
 
-$_SESSION['lang'] = $current_lid;
 
 if (empty($_SESSION['dir'])) {
     $page_direction = $page_direction;
 } else {
     $page_direction = $_SESSION['dir'];
 }
-$_SESSION['dir'] = $page_direction;
 if (empty($_SESSION['lang'])) {
     $current_lid = $language_lid;
 } else {
