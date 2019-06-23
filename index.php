@@ -32,7 +32,7 @@ if (!empty($_GET['mclang'])) {
 }
 
 echo $_SESSION['lang'] = $current_lid;
-$_SESSION['dir'] = $page_direction;
+echo $_SESSION['dir'] = $page_direction;
 
 if (empty($_SESSION['dir'])) {
     $page_direction = $page_direction;
