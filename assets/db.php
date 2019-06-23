@@ -73,6 +73,7 @@ if ($stmt = $mysqli->prepare($sql)) {
     while($stmt->fetch()) {
         $languages[] = array('id'=>$language_lid,'name'=>$language_name,'short'=>$language_short, 'dir'=>$language_dir, 'image'=>$language_image);
     }
+    $language_lid = 1;
 }
 
 $sql = "SELECT `id`,`name`,`slide` FROM `slider` where `bid` = '". site_id ."'";
@@ -242,8 +243,8 @@ if (!empty($cid)) {
                 $stmt->fetch();
                 $post_content = html_entity_decode(htmlspecialchars_decode($post_content));
             }
-    
-    $sql = "SELECT `showsilder` FROM `menu` where `id` = '". $cid ."'"; 
+
+    $sql = "SELECT `showsilder` FROM `menu` where `id` = '". $cid ."'";
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->execute();
         $stmt->store_result();
