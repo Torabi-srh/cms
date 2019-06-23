@@ -270,7 +270,7 @@ section .section-title {
     <meta name="description" content="<?php echo $page_description ?>" />
     <meta name="generator" content="CMS Generator" />
     <title>
-        soroush - <?php echo $page_author ?> - <?php echo $page_title ?>
+        <?php echo $page_author ?> - <?php echo $page_title ?>
     </title>
     <link href="<?php echo $page_favicon ?>" rel="shortcut icon" type="image/x-icon" />
     <?php /* Google Analytics */ ?>
