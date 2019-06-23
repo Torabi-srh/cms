@@ -30,7 +30,7 @@ if (!empty($_GET['mclang'])) {
         }
     }
 }
-
+var_dump( $_SESSION['dir'] ,  $_SESSION['lang']);
 
 if (empty($_SESSION['dir'])) {
     $page_direction = $page_direction;
