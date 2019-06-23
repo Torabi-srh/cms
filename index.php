@@ -8,6 +8,18 @@ if (!empty($_GET['cid'])) {
     $cid = 1;
 }
 $mysqli = isset($mysqli) ? $mysqli : Connection();
+if (!empty($_GET['mclang'])) {
+    foreach ($languages as $lang) {
+        if ($_GET['mclang'] == $lang['id']) {
+            $current_lid = $lang['id'];
+            $page_direction = $lang['dir'];
+            break;
+        }
+    }
+}
+$_SESSION['lang'] = $current_lid;
+$_SESSION['dir'] = $page_direction;
+
 require 'assets/db.php';
 user_activitys();
 
@@ -34,18 +46,7 @@ $content = $post_content;
 $_attachment = (!empty($page_attachment) ? $page_attachment : '');
 $header_q_ = basename($_SERVER['PHP_SELF']);
 $SERVER_REQ = urldecode($_SERVER['REQUEST_URI']);
-if (!empty($_GET['mclang'])) {
-    foreach ($languages as $lang) {
-        if ($_GET['mclang'] == $lang['id']) {
-            $current_lid = $lang['id'];
-            $page_direction = $lang['dir'];
-            break;
-        }
-    }
-}
 
-$_SESSION['lang'] = $current_lid;
-$_SESSION['dir'] = $page_direction;
 
 if (isUrlSafe($SERVER_REQ) > -1) {
     safeRedirect("$restsz");die();exit();
