@@ -226,8 +226,8 @@ section .section-title {
 }
     </style>
     <script src="/js/plugins/jcemediabox/jcemediabox.js?2ee2100a9127451a41de5a4c2c62e127" type="text/javascript"></script>
-    <!--<script src="/js/jquery.min.js" type="text/javascript"></script>-->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
     <script src="/js/script.js" type="text/javascript"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="/js/jquery.easing.min.js" type="text/javascript" defer="defer"></script> 
@@ -598,12 +598,12 @@ PDFObject.embed("/assets/files/full-97-4 - l-r_final.pdf", "#pdfexample1");
                                     <script src="https://cdn.jsdelivr.net/combine/npm/lightgallery,npm/lg-autoplay,npm/lg-fullscreen,npm/lg-hash,npm/lg-pager,npm/lg-share,npm/lg-thumbnail,npm/lg-video,npm/lg-zoom"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
       <script>
-        $(document).ready(function () {
-            // $("#lightgallery").lightGallery(); 
+          (function () {
+// $("#lightgallery").lightGallery();
             $('#lightgallery').lightGallery({
                 selector: '.item'
             });
-        });
+})();
     </script>
                                 <!--document.getElementById("offcanvasoverlay").click();-->
                                 
