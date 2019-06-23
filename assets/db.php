@@ -73,8 +73,8 @@ if ($stmt = $mysqli->prepare($sql)) {
     while($stmt->fetch()) {
         $languages[] = array('id'=>$language_lid,'name'=>$language_name,'short'=>$language_short, 'dir'=>$language_dir, 'image'=>$language_image);
     }
-    $language_lid = 1;
-    $language_dir = 'rtl';
+    $language_lid = $languages[0]['id'];
+    $language_dir = $languages[0]['dir'];
 }
 
 $sql = "SELECT `id`,`name`,`slide` FROM `slider` where `bid` = '". site_id ."'";
