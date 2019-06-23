@@ -600,9 +600,10 @@ PDFObject.embed("/assets/files/full-97-4 - l-r_final.pdf", "#pdfexample1");
       <script>
           (function () {
 // $("#lightgallery").lightGallery();
-            $('#lightgallery').lightGallery({
+document.getElementById('lightgallery').lightGallery({
                 selector: '.item'
             });
+            
 })();
     </script>
                                 <!--document.getElementById("offcanvasoverlay").click();-->
