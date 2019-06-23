@@ -36049,7 +36049,7 @@ table.category {
     .lang-ariab
     img {
         float: right
-    }
+    } 
 
 .rsform {
     background: #ebebeb;
@@ -36058,6 +36058,10 @@ table.category {
     box-shadow: 0 5px 5px 3px rgba(0,0,0,0.2);
     width: 270px;
     height: 200px;
+}
+
+.rsform > img {
+    height: 160px;
 }
 
 #sp-content-bottom {
